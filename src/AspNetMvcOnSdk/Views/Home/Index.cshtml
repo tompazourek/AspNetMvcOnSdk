@@ -1,0 +1,14 @@
+﻿<html>
+<head>
+    <title>AspNetMvcOnSdk</title>
+</head>
+<body>
+@functions {
+    static MvcHtmlString Greet(string name)
+    {
+        return new MvcHtmlString($"Hello {name}!");
+    }
+}
+@Greet("Tom")
+</body>
+</html>
