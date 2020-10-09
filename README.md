@@ -1,6 +1,6 @@
-# Barebones ASP.NET MVC app with SDK-style project
+# ASP.NET MVC (non-Core) app with SDK-style project
 
-Sample application demonstrating design-time Razor Intellisense issues on a barebones ASP.NET MVC app using an SDK-style project.
+Sample application demonstrating design-time Razor Intellisense issues on a barebones ASP.NET MVC (non-Core) app using an SDK-style project on top of .NET Framework 4.8.
 
 
 ## How to use it
