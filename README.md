@@ -31,7 +31,7 @@ CS0115	'_Views_Home_Index.ExecuteAsync()': no suitable method found to override
 
 ### Debugging
 
-You can try setting a breakpoint and attaching to the w3wp.exe process of the IIS app pool. You'll see that debugging works fine even though there are these design-time errors.
+You can try setting a breakpoint in the Razor file and attach to the w3wp.exe process of the IIS app pool. You'll see that debugging in Razor works fine even though there are these design-time errors.
 
 
 ### More info
