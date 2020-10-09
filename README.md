@@ -19,14 +19,13 @@ To run it, set up an IIS website pointing to the `src\AspNetMvcOnSdk` folder.
 
 If you open the `Views\Home\Index.cshtml` file, you'll see red squiggles around the word `MvcHtmlString` and design-time errors appear in "Error list".
 
-I get these errors (note both the C# and Razor are configured to C# 7.3, the last officially supported version):
+I get these errors (note both the C# and Razor have `LangVersion` explicitly configured to `7.3`, the last officially supported version on .NET 4.8):
 
 ```
 CS0246	The type or namespace name 'MvcHtmlString' could not be found (are you missing a using directive or an assembly reference?)
 CS8370	Feature 'nullable reference types' is not available in C# 7.3. Please use language version 8.0 or greater.
 CS0234	The type or namespace name 'AspNetCore' does not exist in the namespace 'Microsoft' (are you missing an assembly reference?)
 CS0115	'_Views_Home_Index.ExecuteAsync()': no suitable method found to override
-CS0246	The type or namespace name 'MvcHtmlString' could not be found (are you missing a using directive or an assembly reference?)
 ```
 
 
