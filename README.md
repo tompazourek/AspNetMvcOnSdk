@@ -7,7 +7,7 @@ Sample application demonstrating design-time Razor Intellisense issues on a bare
 
 ### Build
 
-Just open it in Visual Studio and build, restore should be automatic.
+Just open it in Visual Studio and build, restore should be automatic. Alternatively, you can just stay in the command-line and execute `dotnet build`.
 
 
 ### Deploy/run
