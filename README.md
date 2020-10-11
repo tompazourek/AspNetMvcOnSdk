@@ -37,3 +37,9 @@ You can try setting a breakpoint in the Razor file and attach to the w3wp.exe pr
 ### More info
 
 For more information, see this issue: https://github.com/dotnet/project-system/issues/2670#issuecomment-706025727
+
+
+### Advanced features
+
+Looking for a solution to `MvcBuildViews` or web publishing? Check out the [feature/advanced](https://github.com/tompazourek/AspNetMvcOnSdk/tree/feature/advanced) branch for an example on how to do these.
+
