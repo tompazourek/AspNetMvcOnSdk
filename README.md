@@ -37,3 +37,20 @@ You can try setting a breakpoint in the Razor file and attach to the w3wp.exe pr
 ### More info
 
 For more information, see this issue: https://github.com/dotnet/project-system/issues/2670#issuecomment-706025727
+
+
+### Advanced features
+
+
+#### Views compilation
+
+The Razor views compilation known as `MvcBuildViews` is configured to be executed in `Release` builds, this is controlled via the value of the `MvcBuildViews` MSBuild prop.
+
+If you wish, you can also execute the views compilation alone. To do that, run the `dotnet msbuild /t:MvcBuildViews` command. Note that it's assumed that you run the build beforehand.
+
+
+#### Web publish
+
+Web publish into a folder can be executed via the `dotnet msbuild /t:WebPublish`. Note that it's assumed that you run the build beforehand.
+
+By default, it publishes to the `webpublish` directory in the repository root. To tweak that, use the `WebPublishPath` property, e.g.: `dotnet msbuild /t:WebPublish /p:WebPublishPath="C:\mypublishdirectory"`.
