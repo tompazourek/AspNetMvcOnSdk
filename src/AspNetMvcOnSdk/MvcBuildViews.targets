@@ -1,0 +1,16 @@
+<Project>
+  <Target Name="MvcBuildViewsAfterBuild" AfterTargets="Build">
+    <PropertyGroup Condition="'$(Configuration)'=='Release'">
+      <MvcBuildViews Condition="'$(MvcBuildViews)'==''">True</MvcBuildViews>
+    </PropertyGroup>
+    <CallTarget Targets="MvcBuildViews" Condition="'$(MvcBuildViews)'=='True'" />
+  </Target>
+  <Target Name="MvcBuildViews">
+    <PropertyGroup>
+      <AspNetCompilerPath Condition="'$(AspNetCompilerPath)'==''">$(WINDIR)\Microsoft.NET\Framework64\v4.0.30319\aspnet_compiler.exe</AspNetCompilerPath>
+    </PropertyGroup>
+    <Message Text="Razor views compilation starting."  />
+    <Exec Command='$(AspNetCompilerPath) -nologo -p "$(ProjectDir.TrimEnd("\"))" -v "temp"' />
+    <Message Importance="High" Text="Razor views compilation finished successfully."  />
+  </Target>
+</Project>

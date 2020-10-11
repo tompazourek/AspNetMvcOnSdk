@@ -1,0 +1,19 @@
+<Project>
+  <Target Name="WebPublish">
+    <PropertyGroup>
+      <WebPublishPath Condition="'$(WebPublishPath)'==''">$(ProjectDir)..\..\webpublish\</WebPublishPath>
+    </PropertyGroup>
+    <ItemGroup>
+      <WebPublishBin Include="bin\**\*.*" Exclude="$(PublishDir)**\*.*" />
+    </ItemGroup>
+    <Message Text="Web publish into &quot;$(WebPublishPath)&quot; starting."  />
+    <RemoveDir Directories="$(WebPublishPath)" />
+    <Copy SourceFiles="@(WebPublishBin)"
+          DestinationFolder="$(WebPublishPath)bin\%(RecursiveDir)"
+          SkipUnchangedFiles="True" />
+    <Copy SourceFiles="@(WebPublish)"
+          DestinationFiles="@(WebPublish->'$(WebPublishPath)%(RecursiveDir)%(Filename)%(Extension)')"
+          SkipUnchangedFiles="True" />
+    <Message Importance="High" Text="Web publish into &quot;$(WebPublishPath)&quot; finished successfully."  />
+  </Target>
+</Project>

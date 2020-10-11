@@ -12,5 +12,10 @@
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
     <PackageReference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform" Version="3.6.0" />
   </ItemGroup>
-  <Import Project="AspNetCompiler.targets" />
+  <Import Project="MvcBuildViews.targets" />
+  <Import Project="WebPublish.targets" />
+  <ItemGroup>
+    <WebPublish Include="Web.config" />
+    <WebPublish Include="**\*.cshtml" />
+  </ItemGroup>
 </Project>
