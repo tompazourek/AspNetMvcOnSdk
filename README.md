@@ -1,3 +1,7 @@
+**Note: See the [feature/project-capability](https://github.com/tompazourek/AspNetMvcOnSdk/tree/feature/project-capability) branch for a possible solution to IntelliSense issues by using the [`<ProjectCapability>`](https://github.com/microsoft/VSProjectSystem/blob/master/doc/overview/about_project_capabilities.md) feature.**
+
+---
+
 # ASP.NET MVC (non-Core) app with SDK-style project
 
 Sample application demonstrating design-time Razor Intellisense issues on a barebones ASP.NET MVC (non-Core) app using an SDK-style project on top of .NET Framework 4.8.
